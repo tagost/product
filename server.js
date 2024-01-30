@@ -29,7 +29,7 @@ function sleep(ms) {
   }
 
 app.get('/', function (req, res) {
-    res.send('Welcome to the Istio store!\n');
+    res.send('Welcome to the Istio store Versin 1.0!\n');
 })
 
 // This route shows the 50% off discount page
