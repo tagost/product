@@ -11,6 +11,10 @@ pipeline {
     stage('Checkout Source') {
       steps {
         git branch: 'main', url: 'https://github.com/tagost/product.git'
+          script {
+            REPO_NAME = env.GIT_URL.replaceFirst(/.*\/([^\/]+)\.git$/, '$1')
+            sh "echo ${REPO_NAME}"
+        }
       }
     }
     
